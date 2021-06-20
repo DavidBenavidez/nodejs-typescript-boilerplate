@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+    node-service:
+        build: .
+        image: node-service:v1
+        container_name: node-service
+        volumes:
+            - /usr/node-app
+        ports:
+            - "8080:8080"
+        depends_on:
+            - node-database
+    node-database:
+        image: mysql:5.7
+        container_name: node-database
+        ports:
+            - "3300:3306"
+        restart: always
+        environment:
+            MYSQL_USER: ${DB_USER}
+            MYSQL_DATABASE: ${DB}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: 'root'
