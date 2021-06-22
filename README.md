@@ -5,11 +5,19 @@
   - Typeorm
 - javascript branch uses... javascript
   - Sequelize
-  - Utilizes SOLID principles
 
-## typesript File structure
+## Env file
+### Create a dotenv (.env) file with the following format:
+```
+DB_HOST=127.0.0.1
+DB_NAME=""
+DB_PORT=8080
+DB_USER=root
+DB_PASSWORD=""
+DB_PORT=3306
 
-## javascript File structure
+```
+## File structure
 . \
 +-- app.js initializes routes.js \
 +-- routes.js mounts controller \
