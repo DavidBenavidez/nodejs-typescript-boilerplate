@@ -5,11 +5,8 @@
   - Typeorm
 - javascript branch uses... javascript
   - Sequelize
-  - Utilizes SOLID principles
 
-## typesript File structure
-
-## javascript File structure
+## File structure
 . \
 +-- app.js initializes routes.js \
 +-- routes.js mounts controller \
