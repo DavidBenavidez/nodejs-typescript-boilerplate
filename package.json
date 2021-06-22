@@ -6,9 +6,6 @@
   "scripts": {
     "start": "nodemon dist/index.js",
     "build": "rm -rf dist && gulp",
-    "db:migrate": "cd ./src; sequelize db:migrate; cd ..",
-    "db:clear": "cd ./src; sequelize db:migrate:undo:all; cd ..",
-    "db:status": "cd ./src; sequelize db:migrate:status; cd ..",
     "local:compose:up": "docker-compose --file ./docker-compose.yml up --build --remove-orphans;",
     "local:compose:stop": "docker-compose --file ./docker-compose.yml stop",
     "local:compose:start": "docker-compose --file ./docker-compose.yml start",
