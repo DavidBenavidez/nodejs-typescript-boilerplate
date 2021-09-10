@@ -4,7 +4,7 @@ FROM node:latest AS build
 WORKDIR /usr/src/app
 COPY package*.json /usr/src/app/
 RUN npm ci --only=production
-RUN npm build
+RUN npm run build
 
 # --------------> The production image
 FROM node:lts-alpine
